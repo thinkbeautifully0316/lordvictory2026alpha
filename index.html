@@ -204,4 +204,25 @@ listenData();
 </script>
 
 </body>
+</> JavaScript
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCcuO4v30kyXNOTBzp6cC2-NV07HoiXYkc",
+  authDomain: "alphagogo-e59bc.firebaseapp.com",
+  projectId: "alphagogo-e59bc",
+};
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+
+firebase.auth().signInWithEmailAndPassword(email, password)
+
+
+</html>  
 </html>
